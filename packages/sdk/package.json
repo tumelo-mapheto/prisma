@@ -27,6 +27,7 @@
     "lint": "eslint --cache --fix --ext .ts .",
     "lint-ci": "eslint --ext .ts .",
     "test": "jest --verbose",
+    "test-fast": "cross-env TEST_USE_SWC=true jest --verbose",
     "precommit": "lint-staged"
   },
   "files": [
@@ -35,6 +36,8 @@
     "scripts"
   ],
   "devDependencies": {
+    "@swc/core": "1.2.120",
+    "@swc/jest": "0.2.15",
     "@types/jest": "27.0.3",
     "@types/node": "12.20.37",
     "@types/resolve": "1.20.1",
@@ -42,6 +45,7 @@
     "@types/tar": "6.1.1",
     "@typescript-eslint/eslint-plugin": "5.4.0",
     "@typescript-eslint/parser": "5.4.0",
+    "cross-env": "7.0.3",
     "esbuild": "0.13.14",
     "eslint": "8.3.0",
     "eslint-config-prettier": "8.3.0",

@@ -23,6 +23,8 @@
     "@prisma/engines-version": "3.7.0-20.95858696ec5b15e0c7c9d7a3cac4678fcd6274da",
     "@prisma/generator-helper": "workspace:*",
     "@prisma/sdk": "workspace:*",
+    "@swc/core": "1.2.120",
+    "@swc/jest": "0.2.15",
     "@types/jest": "27.0.3",
     "@types/node": "12.20.37",
     "@types/pg": "8.6.1",
@@ -31,6 +33,7 @@
     "@typescript-eslint/eslint-plugin": "5.4.0",
     "@typescript-eslint/parser": "5.4.0",
     "chalk": "4.1.2",
+    "cross-env": "7.0.3",
     "esbuild": "0.13.14",
     "eslint": "8.3.0",
     "eslint-config-prettier": "8.3.0",
@@ -78,6 +81,7 @@
     "lint": "eslint --cache --fix --ext .ts .",
     "lint-ci": "eslint --ext .ts .",
     "test": "jest --verbose",
+    "test-fast": "cross-env TEST_USE_SWC=true jest --verbose",
     "prepublishOnly": "pnpm run build"
   },
   "files": [

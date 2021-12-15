@@ -1,5 +1,4 @@
-module.exports = {
-  preset: 'ts-jest',
+const config = {
   testEnvironment: 'node',
   testMatch: ['**/src/__tests__/**/*.test.ts'],
   collectCoverage: process.env.CI ? true : false,
@@ -19,3 +18,23 @@ module.exports = {
   // to get rid of "jest-haste-map: Haste module naming collision: package name"
   modulePathIgnorePatterns: ['<rootDir>/src/__tests__/fixtures/'],
 }
+
+if (process.env.TEST_USE_SWC) {
+  config.transform = {
+    '^.+\\.ts$': [
+      '@swc/jest',
+      {
+        jsc: {
+          parser: {
+            syntax: 'typescript',
+          },
+          target: 'es2018',
+        },
+      },
+    ],
+  }
+} else {
+  config.preset = 'ts-jest'
+}
+
+module.exports = config
