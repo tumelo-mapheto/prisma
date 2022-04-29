@@ -62,7 +62,7 @@
     "index-browser.js"
   ],
   "devDependencies": {
-    "@jest/test-sequencer": "27.5.1",
+    "@jest/test-sequencer": "28.0.2",
     "@microsoft/api-extractor": "7.19.3",
     "@opentelemetry/api": "1.0.3",
     "@prisma/debug": "workspace:*",
@@ -96,7 +96,7 @@
     "indent-string": "4.0.0",
     "is-obj": "2.0.0",
     "is-regexp": "2.1.0",
-    "jest": "27.5.1",
+    "jest": "28.0.3",
     "jest-junit": "13.2.0",
     "js-levenshtein": "1.1.6",
     "klona": "2.0.5",
